@@ -1,0 +1,312 @@
+{% extends 'base/header.html'%}
+
+{%load static%}
+
+{% block content%}
+<section class="max-w-7xl mx-auto px-6 py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+ 
+      <!-- LEFT: product image -->
+      <div class="relative">
+        <button class="absolute top-4 right-4 z-10 text-slate-600 hover:text-slate-900">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V5a1 1 0 011-1h3M20 8V5a1 1 0 00-1-1h-3M4 16v3a1 1 0 001 1h3m12-4v3a1 1 0 01-1 1h-3" />
+          </svg>
+        </button>
+        <div class="flex items-center justify-center h-[520px]">
+          <img src="{{MEDIA_URL}}/media/fames.webp" alt="Augue Nullam beanie" class="max-h-full max-w-full object-contain">
+        </div>
+      </div>
+ 
+      <!-- RIGHT: product info -->
+      <div>
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 text-sm font-semibold flex-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 3l9 8h-2v9h-5v-6H10v6H5v-9H3l9-8z"/>
+          </svg>
+          <span class="text-gray-300">&gt;</span>
+          <a href="#" class="text-amber-500 hover:underline">SHOP</a>
+          <span class="text-gray-300">&gt;</span>
+          <a href="#" class="text-amber-500 hover:underline">Sweaters</a>
+          <span class="text-gray-300">&gt;</span>
+          <span class="text-slate-900">Fames Primis</span>
+        </div>
+ 
+        <h1 class="text-4xl font-black text-slate-900 mt-6">Fames Primis</h1>
+        <p class="text-2xl font-bold text-slate-700 mt-4">$35.00</p>
+ 
+        <p class="text-slate-500 mt-6 leading-relaxed">
+          Porttitor parturient senectus pharetra vehicula nullam auctor dictum suspendisse est. Fames ante mauris nec magna pulvinar taciti lobortis.
+        </p>
+        <p class="text-slate-500 mt-4 leading-relaxed">
+          Fermentum ac maximus consectetur fringilla eleifend? Magnis est morbi ornare erat, conubia pellentesque aenean maecenas.
+        </p>
+ 
+        <hr class="border-gray-200 mt-8">
+ 
+        <!-- Quantity + Add to cart -->
+        <div class="flex items-stretch gap-4 mt-8">
+          <div class="flex items-center border border-gray-200 rounded-lg">
+            <span class="px-5 text-slate-900 font-semibold">1</span>
+            <div class="flex flex-col border-l border-gray-200">
+              <button class="px-2.5 py-1 hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+                </svg>
+              </button>
+              <button class="px-2.5 py-1 border-t border-gray-200 hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+ 
+          <button class="flex-1 bg-slate-900 text-white font-semibold rounded-lg hover:bg-slate-700 transition-colors duration-200">
+            Add to cart
+          </button>
+        </div>
+ 
+        <!-- Wishlist / Compare / Size Guide -->
+        <div class="flex items-center gap-8 mt-6">
+          <a href="#" class="inline-flex items-center gap-2 font-semibold text-slate-700 hover:text-slate-900">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+            Wishlist
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 font-semibold text-slate-700 hover:text-slate-900">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+            Compare
+          </a>
+          <a href="#" class="inline-flex items-center gap-2 font-semibold text-slate-700 hover:text-slate-900">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="6" width="18" height="12" rx="2" />
+              <path stroke-linecap="round" d="M7 10v4M11 10v4M15 10v2" />
+            </svg>
+            Size Guide
+          </a>
+        </div>
+ 
+        <hr class="border-gray-200 mt-8">
+ 
+        <!-- Category -->
+        <p class="mt-8 text-slate-900"><span class="font-bold">CATEGORY:</span> <span class="text-slate-400">Sweaters</span></p>
+ 
+        <!-- Share -->
+        <p class="font-bold text-slate-900 mt-6 mb-4">Share your love</p>
+        <div class="flex items-center gap-3">
+          <a href="#" class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-800 text-white hover:bg-slate-900 transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
+          </a>
+          <a href="#" class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-800 text-white hover:bg-slate-900 transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.9 3H21.6l-5.8 6.6L22.7 21h-5.3l-4.2-5.5L8.4 21H5.7l6.2-7.1L4.3 3h5.4l3.8 5 5.4-5zM17.9 19.4h1.5L8.2 4.5H6.6l11.3 14.9z"/></svg>
+          </a>
+          <a href="#" class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-800 text-white hover:bg-slate-900 transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-3.16 19.49c-.08-.83-.15-2.1.03-3 .16-.72 1.05-4.56 1.05-4.56s-.27-.54-.27-1.33c0-1.24.72-2.17 1.62-2.17.77 0 1.14.57 1.14 1.26 0 .77-.49 1.92-.74 2.99-.21.9.45 1.63 1.33 1.63 1.6 0 2.83-1.69 2.83-4.12 0-2.15-1.55-3.66-3.76-3.66-2.56 0-4.06 1.92-4.06 3.9 0 .77.3 1.6.67 2.05a.27.27 0 01.06.26c-.07.29-.22.9-.25 1.02-.04.17-.13.2-.3.12-1.12-.52-1.82-2.15-1.82-3.46 0-2.82 2.05-5.41 5.91-5.41 3.1 0 5.51 2.21 5.51 5.16 0 3.08-1.94 5.55-4.64 5.55-.9 0-1.75-.47-2.04-1.03l-.56 2.12c-.2.78-.75 1.75-1.11 2.34A10 10 0 1012 2z"/></svg>
+          </a>
+          <a href="#" class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-800 text-white hover:bg-slate-900 transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18V9.75H5.67V18h2.67zM7 8.6c.86 0 1.4-.57 1.4-1.28-.02-.73-.54-1.28-1.38-1.28-.84 0-1.4.55-1.4 1.28 0 .71.54 1.28 1.37 1.28H7zM18.5 18v-4.7c0-2.52-1.34-3.69-3.13-3.69-1.44 0-2.08.79-2.44 1.35v-1.16H10.3c.03.7 0 8.2 0 8.2h2.63v-4.58c0-.24.02-.49.1-.67.2-.49.66-1 1.44-1 1.02 0 1.42.77 1.42 1.9V18h2.6z"/></svg>
+          </a>
+          <a href="#" class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-800 text-white hover:bg-slate-900 transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.5 3A9.5 9.5 0 002.6 15.3L2 21l5.9-.6A9.5 9.5 0 1017.5 3zm-5.4 17.2c-1.5 0-2.9-.4-4.2-1.1l-.3-.2-3.1.3.3-3-.2-.3a7.8 7.8 0 1114.5-4.4c0 4.3-3.5 7.7-7 8.7z"/></svg>
+          </a>
+          <a href="#" class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-800 text-white hover:bg-slate-900 transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 6.5c-2-3-6-4-8-2.5-1.5 3 0 8 8 12 8-4 9.5-9 8-12-2-1.5-6-.5-8 2.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ============ TABS SECTION (pure CSS, no JS) ============ -->
+  <section class="max-w-7xl mx-auto px-6 py-6">
+ 
+    <input type="radio" id="tab-desc" name="product-tabs" class="peer/desc hidden" checked>
+    <input type="radio" id="tab-info" name="product-tabs" class="peer/info hidden">
+    <input type="radio" id="tab-rev" name="product-tabs" class="peer/rev hidden">
+ 
+    <div class="flex items-center gap-10 border-b border-gray-200">
+      <label for="tab-desc" class="cursor-pointer pb-4 font-semibold text-slate-400 border-b-2 border-transparent peer-checked/desc:text-amber-500 peer-checked/desc:border-amber-500 [.peer\/desc:checked~&]:text-amber-500 [.peer\/desc:checked~&]:border-amber-500">
+        DESCRIPTION
+      </label>
+      <label for="tab-info" class="cursor-pointer pb-4 font-semibold text-slate-400 border-b-2 border-transparent [.peer\/info:checked~&]:text-amber-500 [.peer\/info:checked~&]:border-amber-500">
+        ADDITIONAL INFORMATION
+      </label>
+      <label for="tab-rev" class="cursor-pointer pb-4 font-semibold text-slate-400 border-b-2 border-transparent [.peer\/rev:checked~&]:text-amber-500 [.peer\/rev:checked~&]:border-amber-500">
+        REVIEWS (0)
+      </label>
+    </div>
+ 
+    <!-- Description panel -->
+    <div class="hidden [.peer\/desc:checked~&]:block pt-8 space-y-5 text-slate-500 leading-relaxed">
+      <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse scelerisque libero varius morbi aenean urna. Magnis habitasse viverra tincidunt volutpat mauris praesent lorem vel. Nibh orci sed taciti morbi scelerisque elementum eu.</p>
+      <p>Nulla gravida dui efficitur ullamcorper leo vulputate hac fringilla. Lectus vel molestie phasellus eros imperdiet nisi inceptos potenti. Justo et elit cubilia ligula nibh nisl mi proin. Fermentum lacinia consectetur quis nullam semper augue nullam adipiscing.</p>
+      <p>Porttitor parturient senectus pharetra vehicula nullam auctor dictum suspendisse est. Fames ante mauris nec magna pulvinar taciti lobortis. Fermentum ac maximus consectetur fringilla eleifend? Magnis est morbi ornare erat, conubia pellentesque aenean maecenas.</p>
+      <p>Dignissim magna tristique dui leo feugiat eget pharetra massa. Molestie sociosqu aliquet erat mauris; aliquet ullamcorper. Eget turpis aptent suscipit viverra rutrum quisque dis.</p>
+    </div>
+ 
+    <!-- Additional information panel -->
+    <div class="hidden [.peer\/info:checked~&]:block pt-8 text-slate-500 leading-relaxed">
+      <p>Weight: 0.2kg &middot; Material: 100% acrylic knit &middot; Care: hand wash cold, lay flat to dry.</p>
+    </div>
+ 
+    <!-- Reviews panel -->
+    <div class="hidden [.peer\/rev:checked~&]:block pt-8 text-slate-500 leading-relaxed">
+      <p>There are no reviews yet.</p>
+    </div>
+ 
+  </section>
+ 
+  <!-- ============ RELATED PRODUCTS ============ -->
+  <section class="max-w-7xl mx-auto px-6 py-10">
+    <h2 class="text-3xl font-black text-slate-900 mb-8">Related products</h2>
+ 
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+ 
+      <!-- Montes Dictum (SALE) -->
+      <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+        <span class="absolute top-4 left-4 z-10 bg-amber-400 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-md">SALE</span>
+        <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+          </button>
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" /></svg>
+          </button>
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          </button>
+        </div>
+        <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+          <img src="https://placehold.co/300x300/f5f3ef/f5f3ef" alt="Montes Dictum" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+        </div>
+        <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+          <h3 class="font-bold text-slate-900">Montes Dictum</h3>
+          <p class="text-xs text-gray-400 tracking-wide mt-1">HATS &amp; SCARFS</p>
+        </div>
+        <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+          <span class="font-bold text-slate-900">$15.00 <span class="text-gray-400 font-normal line-through text-sm">$20.00</span></span>
+          <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+        </div>
+      </div>
+ 
+      <!-- Orimis Neque -->
+      <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+        <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+          </button>
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" /></svg>
+          </button>
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          </button>
+        </div>
+        <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+          <img src="https://placehold.co/300x300/f5f3ef/f5f3ef" alt="Orimis Neque" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+        </div>
+        <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+          <h3 class="font-bold text-slate-900">Orimis Neque</h3>
+          <p class="text-xs text-gray-400 tracking-wide mt-1">HATS &amp; SCARFS</p>
+        </div>
+        <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+          <span class="font-bold text-slate-900">$20.00</span>
+          <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+        </div>
+      </div>
+ 
+      <!-- Hendrerit Elitest -->
+      <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+        <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+          </button>
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" /></svg>
+          </button>
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          </button>
+        </div>
+        <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+          <img src="https://placehold.co/300x300/f5f3ef/f5f3ef" alt="Hendrerit Elitest" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+        </div>
+        <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+          <h3 class="font-bold text-slate-900">Hendrerit Elitest</h3>
+          <p class="text-xs text-gray-400 tracking-wide mt-1">HATS &amp; SCARFS</p>
+        </div>
+        <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+          <span class="font-bold text-slate-900">$20.00</span>
+          <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+        </div>
+      </div>
+ 
+      <!-- Porttitor Viverra -->
+      <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+        <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+          </button>
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" /></svg>
+          </button>
+          <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          </button>
+        </div>
+        <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+          <img src="https://placehold.co/300x300/f5f3ef/f5f3ef" alt="Porttitor Viverra" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+        </div>
+        <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+          <h3 class="font-bold text-slate-900">Porttitor Viverra</h3>
+          <p class="text-xs text-gray-400 tracking-wide mt-1">HATS &amp; SCARFS</p>
+        </div>
+        <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+          <span class="font-bold text-slate-900">$15.00</span>
+          <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- ============ FIXED BOTTOM ADD-TO-CART BAR ============ -->
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <img src="https://placehold.co/80x80/f5f3ef/f5f3ef" alt="Augue Nullam" class="h-12 w-12 rounded-lg object-cover">
+        <div>
+          <p class="font-semibold text-slate-900 text-sm">Augue Nullam</p>
+          <p class="text-slate-500 text-sm">$25.00</p>
+        </div>
+      </div>
+ 
+      <div class="flex items-center gap-4">
+        <div class="flex items-center border border-gray-200 rounded-lg">
+          <span class="px-5 text-slate-900 font-semibold">1</span>
+          <div class="flex flex-col border-l border-gray-200">
+            <button class="px-2 py-0.5 hover:bg-gray-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+              </svg>
+            </button>
+            <button class="px-2 py-0.5 border-t border-gray-200 hover:bg-gray-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+ 
+        <button class="bg-slate-900 text-white font-semibold px-8 py-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 whitespace-nowrap">
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
+  {%endblock content%}

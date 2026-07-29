@@ -1,0 +1,765 @@
+{% extends 'base/header.html'%}
+
+{%load static%}
+
+{% block content%}
+
+<section class="w-full mx-auto px-6 py-12"> <!--shop hero section-->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Card 1: Collections -->
+          <div class="group relative rounded-3xl overflow-hidden h-130 w-3/3">
+            <img
+              src="{{MEDIA_URL}}/media/shop-hero-1.webp"
+              alt="Collections"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/10"
+            ></div>
+
+            <div class="relative flex items-start justify-between p-6">
+              <span
+                class="bg-white text-slate-900 text-sm font-semibold px-5 py-3 rounded-full"
+                >Collections</span
+              >
+              <span
+                class="flex items-center justify-center h-11 w-11 rounded-full bg-white hover:bg-black hover:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7 17L17 7M17 7H7M17 7V17"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white font-bold text-2xl leading-snug">
+                Blandit Natoque Elementum Nascetur
+              </h3>
+            </div>
+          </div>
+
+          <!-- Card 2: New Arrivals -->
+          <div class="group relative rounded-3xl overflow-hidden h-130 w-80">
+            <img
+              src="{{MEDIA_URL}}/media/shop-hero-2.webp"
+              alt="New Arrivals"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/10"
+            ></div>
+
+            <div class="relative flex items-start justify-between p-6">
+              <span
+                class="bg-white text-slate-900 text-sm font-semibold px-5 py-3 rounded-full"
+                >New Arrivals</span
+              >
+              <span
+                class="flex items-center justify-center h-11 w-11 rounded-full bg-white hover:bg-black hover:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7 17L17 7M17 7H7M17 7V17"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h3 class="text-white font-bold text-2xl leading-snug">
+                Fermentum Maximus Consecte Bingilla
+              </h3>
+            </div>
+          </div>
+
+          <!-- Card 3: Discounts + Subscribe -->
+          <div
+            class="group absolute rounded-3xl overflow-hidden h-130 w-138 ml-198"
+          >
+            <img
+              src="{{MEDIA_URL}}/media/shop-hero-3.webp"
+              alt="Discounts"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"
+            ></div>
+
+            <div class="relative flex items-start justify-between p-6">
+              <span
+                class="bg-white text-slate-900 text-sm font-semibold px-5 py-3 rounded-full"
+                >Discounts</span
+              >
+              <span
+                class="flex items-center justify-center h-11 w-11 rounded-full bg-white hover:bg-black hover:text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M7 17L17 7M17 7H7M17 7V17"
+                  />
+                </svg>
+              </span>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="flex items-stretch gap-3">
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  class="flex-1 bg-white rounded-lg px-5 py-4 text-sm text-slate-600 placeholder-slate-400 focus:outline-none min-w-0"
+                />
+                <button
+                  class="bg-slate-900 text-white font-semibold px-6 py-4 rounded-lg hover:bg-yellow-400 hover:text-black transition-colors duration-200 whitespace-nowrap"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="max-w-7xl mx-auto px-6 py-10">
+  <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-10">
+ 
+    <!-- LEFT: products -->
+    <div>
+ 
+      <!-- Top bar -->
+      <div class="flex items-center justify-between mb-6">
+        <p class="text-sm font-semibold tracking-wide text-slate-500">SHOWING 1-12 OF 35 RESULTS</p>
+        <select class="border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-slate-700 focus:outline-none">
+          <option>Default sorting</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Newest</option>
+        </select>
+      </div>
+ 
+      <!-- Product grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+ 
+        <!-- Card: Augue Nullam -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-1.webp" alt="Augue Nullam" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Augue Nullam</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">HATS &amp; SCARFS</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$25.00</span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+        <!-- Card: Congue Quam (SALE) -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <span class="absolute top-4 left-4 z-10 bg-amber-400 text-slate-900 text-xs font-bold px-3 py-1.5 rounded-md">SALE</span>
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-2.webp" alt="Congue Quam" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Congue Quam</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">SWEATERS</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$40.00 <span class="text-gray-400 font-normal line-through text-sm">$45.00</span></span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+        <!-- Card: Cras Malesua -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-3.webp" alt="Cras Malesua" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Cras Malesua</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">HATS &amp; SCARFS</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$20.00</span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+        <!-- Card: Curae Musa -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-4.webp" alt="Curae Musa" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Curae Musa</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">SHOES &amp; SOCKS</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$17.00</span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+        <!-- Card: Fames Primis -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-5.webp" alt="Fames Primis" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Fames Primis</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">SWEATERS</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$35.00</span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+        <!-- Card: Fusce Etiam -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-6.webp" alt="Fusce Etiam" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Fusce Etiam</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">DRESSES</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$35.00</span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+        <!-- Card: Fusce Phasellus -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-7.webp" alt="Fusce Phasellus" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Fusce Phasellus</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">SWEATERS</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$30.00</span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+        <!-- Card: Hendrerit Elitest -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-8.webp" alt="Hendrerit Elitest" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Hendrerit Elitest</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">HATS &amp; SCARFS</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$20.00</span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+        <!-- Card: Iaculis Craso -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-9.webp" alt="Iaculis Craso" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Iaculis Craso</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">TOYS &amp; GAMES</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$40.00</span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+        <!-- Card: Interdu Torquent -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-10.webp" alt="Interdu Torquent" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Interdu Torquent</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">T-SHIRTS</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$15.00</span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+        <!-- Card: Justo Finibus -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-11.webp" alt="Justo Finibus" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Justo Finibus</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">DRESSES</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$35.00</span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+        <!-- Card: Libero Semper -->
+        <div class="group relative border border-gray-200 rounded-2xl flex flex-col hover:shadow-lg transition-shadow duration-300">
+          <div class="absolute top-4 right-4 flex flex-col gap-2 z-10">
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4M16 17H4m0 0l4 4m-4-4l4-4" />
+              </svg>
+            </button>
+            <button class="flex items-center justify-center h-9 w-9 rounded-full bg-white border border-gray-200 text-slate-600 hover:bg-slate-900 hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+          <div class="overflow-hidden rounded-t-2xl h-56 flex items-center justify-center p-6">
+            <img src="{{MEDIA_URL}}/media/product-image-12.webp" alt="Libero Semper" class="max-h-full max-w-full object-contain transition-transform duration-500 ease-out group-hover:scale-110">
+          </div>
+          <div class="flex-1 flex flex-col items-center text-center px-4 pb-4">
+            <h3 class="font-bold text-slate-900">Libero Semper</h3>
+            <p class="text-xs text-gray-400 tracking-wide mt-1">SWEATERS</p>
+          </div>
+          <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4">
+            <span class="font-bold text-slate-900">$25.00</span>
+            <button class="text-sm font-semibold text-slate-700 hover:text-slate-900">Add to cart</button>
+          </div>
+        </div>
+ 
+      </div>
+ 
+      <!-- Pagination -->
+      <div class="flex items-center justify-between mt-10">
+        <div class="flex items-center gap-2">
+          <button class="h-10 w-10 rounded-lg bg-amber-400 text-slate-900 font-bold text-sm">1</button>
+          <button class="h-10 w-10 rounded-lg text-slate-700 font-semibold text-sm hover:bg-gray-100">2</button>
+          <button class="h-10 w-10 rounded-lg text-slate-700 font-semibold text-sm hover:bg-gray-100">3</button>
+        </div>
+        <button class="inline-flex items-center gap-2 border border-gray-200 text-slate-900 font-semibold text-sm px-5 py-2.5 rounded-lg hover:border-gray-400 transition-colors duration-200">
+          NEXT
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+ 
+    <!-- RIGHT: filters sidebar -->
+    <aside class="space-y-10">
+ 
+      <!-- Price + Color filter (single section) -->
+      <div>
+        <h3 class="font-bold text-slate-900 mb-5">Filter by price</h3>
+ 
+        <!-- range slider (visual) -->
+        <div class="relative h-1 bg-gray-200 rounded-full mb-4">
+          <div class="absolute left-[5%] right-[10%] top-0 h-1 bg-amber-400 rounded-full"></div>
+          <span class="absolute left-[5%] -top-2 h-5 w-5 rounded-full bg-white border-2 border-amber-400 -translate-x-1/2"></span>
+          <span class="absolute right-[10%] -top-2 h-5 w-5 rounded-full bg-white border-2 border-amber-400 translate-x-1/2"></span>
+        </div>
+        <p class="text-sm text-slate-500 mb-8">Price: <span class="font-semibold text-slate-900">$15 - $50</span></p>
+ 
+        <h3 class="font-bold text-slate-900 mb-5">Filter by color</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <span class="h-5 w-5 rounded-full border border-gray-300 bg-white"></span> White
+            </label>
+            <span class="text-sm text-slate-400">6</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <span class="h-5 w-5 rounded-full border border-gray-300 bg-gray-400"></span> Gray
+            </label>
+            <span class="text-sm text-slate-400">3</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <span class="h-5 w-5 rounded-full border border-gray-300 bg-amber-100"></span> Beige
+            </label>
+            <span class="text-sm text-slate-400">11</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <span class="h-5 w-5 rounded-full border border-gray-300 bg-yellow-400"></span> Yellow
+            </label>
+            <span class="text-sm text-slate-400">3</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <span class="h-5 w-5 rounded-full border border-gray-300 bg-orange-500"></span> Orange
+            </label>
+            <span class="text-sm text-slate-400">3</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <span class="h-5 w-5 rounded-full border border-gray-300 bg-red-500"></span> Red
+            </label>
+            <span class="text-sm text-slate-400">8</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <span class="h-5 w-5 rounded-full border border-gray-300 bg-purple-500"></span> Purple
+            </label>
+            <span class="text-sm text-slate-400">5</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <span class="h-5 w-5 rounded-full border border-gray-300 bg-blue-500"></span> Blue
+            </label>
+            <span class="text-sm text-slate-400">5</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <span class="h-5 w-5 rounded-full border border-gray-300 bg-green-700"></span> Green
+            </label>
+            <span class="text-sm text-slate-400">5</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <span class="h-5 w-5 rounded-full border border-gray-300 bg-black"></span> Black
+            </label>
+            <span class="text-sm text-slate-400">1</span>
+          </li>
+        </ul>
+      </div>
+ 
+      <!-- Category filter -->
+      <div>
+        <h3 class="font-bold text-slate-900 mb-5">Filter by category</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-slate-900 focus:ring-0"> Toys &amp; Games
+            </label>
+            <span class="text-sm text-slate-400">5</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-slate-900 focus:ring-0"> Dresses
+            </label>
+            <span class="text-sm text-slate-400">6</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-slate-900 focus:ring-0"> Hats &amp; Scarfs
+            </label>
+            <span class="text-sm text-slate-400">6</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-slate-900 focus:ring-0"> Shoes &amp; Socks
+            </label>
+            <span class="text-sm text-slate-400">6</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-slate-900 focus:ring-0"> Sweaters
+            </label>
+            <span class="text-sm text-slate-400">7</span>
+          </li>
+          <li class="flex items-center justify-between">
+            <label class="flex items-center gap-3 text-slate-600 cursor-pointer">
+              <input type="checkbox" class="h-4 w-4 rounded border-gray-300 text-slate-900 focus:ring-0"> T-shirts
+            </label>
+            <span class="text-sm text-slate-400">5</span>
+          </li>
+        </ul>
+      </div>
+ 
+      <!-- Best selling -->
+      <div>
+        <h3 class="font-bold text-slate-900 mb-5">Best selling</h3>
+        <ul class="space-y-4">
+          <li class="flex items-center gap-4">
+            <img src="{{MEDIA_URL}}/media/product-image-13.webp" alt="Torquent Oduis" class="h-16 w-16 rounded-lg object-cover">
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">Torquent Oduis</p>
+              <p class="text-slate-500 text-sm mt-1">$25.00</p>
+            </div>
+          </li>
+          <li class="flex items-center gap-4">
+            <img src="{{MEDIA_URL}}/media/product-image-14.webp" alt="Justo Finibus" class="h-16 w-16 rounded-lg object-cover">
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">Justo Finibus</p>
+              <p class="text-slate-500 text-sm mt-1">$35.00</p>
+            </div>
+          </li>
+          <li class="flex items-center gap-4">
+            <img src="{{MEDIA_URL}}/media/product-image-15.webp" alt="Mattis Aliquam" class="h-16 w-16 rounded-lg object-cover">
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">Mattis Aliquam</p>
+              <p class="text-slate-500 text-sm mt-1">$30.00 <span class="line-through text-slate-400">$35.00</span></p>
+            </div>
+          </li>
+          <li class="flex items-center gap-4">
+            <img src="{{MEDIA_URL}}/media/product-image-16.webp" alt="Montes Dictum" class="h-16 w-16 rounded-lg object-cover">
+            <div>
+              <p class="font-semibold text-slate-900 text-sm">Montes Dictum</p>
+              <p class="text-slate-500 text-sm mt-1">$15.00 <span class="line-through text-slate-400">$20.00</span></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+ 
+      <!-- Promo card -->
+      <div class="relative rounded-3xl overflow-hidden bg-amber-200 min-h-[340px]">
+        <div class="relative z-10 p-6">
+          <p class="text-xs font-bold tracking-wide text-slate-800">NEW COLLECTION</p>
+          <div class="flex items-end gap-1 mt-2">
+            <span class="text-6xl font-black text-slate-900 leading-none">40</span>
+            <span class="flex flex-col leading-tight pb-1">
+              <span class="text-slate-900 font-semibold text-sm">%</span>
+              <span class="text-slate-900 font-semibold text-sm">OFF</span>
+            </span>
+          </div>
+          <a href="#" class="inline-block mt-32 bg-slate-900 text-white font-semibold text-sm px-6 py-4 rounded-lg hover:bg-slate-700 transition-colors duration-200">
+            View Offer
+          </a>
+        </div>
+        <img src="{{MEDIA_URL}}/media/boy-child.webp" alt="New collection" class="absolute bottom-0  right-3 h-56 w-auto object-contain">
+      </div>
+ 
+    </aside>
+ 
+  </div>
+</section>
+{% endblock content%}

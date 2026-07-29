@@ -1,0 +1,447 @@
+{%load static tailwind_tags%}
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    {%tailwind_css%}
+    <title>ecom</title>
+  </head>
+  <body class="flex flex-col justify-center items-center bg-white">
+    <div class="w-[90%] text-black ">
+      <!--Main Container-->
+      <div class="w-full h-20 flex justify-between ">
+        <!--logo heading-->
+        <div class="w-1/4 " >
+          <img src="{{MEDIA_URL}}/media/logo.svg" class="h-25 w-25" alt="" />
+        </div>
+        <div class="w-2/4 flex flex-col justify-center items-center">
+          <div
+            class="w-[90%] h-[50%] rounded-xl bg-gray-200 flex justify-between p-4"
+          >
+            <div class="w-4/5 flex items-center">What are you looking for?</div>
+            <div class="flex w-1/2 gap-5 justify-end">
+              <div class="flex items-center justify-center gap-1">
+                select category
+                <svg
+                  class="flex items-center justify-center mt-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="13"
+                  height="13"
+                  fill="currentColor"
+                  class="bi bi-chevron-down"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                  />
+                </svg>
+              </div>
+              <div class="flex items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-1/4 flex items-center justify-center">
+          <div
+            class="flex items-center justify-center gap-2 border rounded-3xl p-1 border-gray-200 shadow-m"
+          >
+            <div class="bg-black p-3 rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="white"
+                class="bi bi-telephone-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+                />
+              </svg>
+            </div>
+            <div class="p-1">+977 9844208213</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full h-20">
+        <!--navbar-->
+        <!--main nav -->
+        <div class="flex justify-start items-center gap-5 w-1/2">
+          <!--nav1-->
+
+          <a
+            href="{%url 'home'%}"
+            id="home"
+            class="nav-link hover:border-b-green-700 h-full border-b-2 border-transparent p-5 py-6 transition-all duration-300 ease-in-out"
+            >HOME</a
+          >
+          <a
+            href="{%url 'shop'%}"
+            id="shop"
+            class="flex gap-2 items-center nav-link  hover:border-b-green-700 h-full border-b-2 border-transparent p-5 py-6 transition-all duration-300 ease-in-out"
+            >SHOP
+            <svg
+              class="flex items-center justify-center mt-1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="13"
+              height="13"
+              fill="currentColor"
+              class="bi bi-chevron-down"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+              /></svg
+          ></a>
+          <a
+            href="{% url 'news'%}"
+            id="news"
+            class="nav-link hover:border-b-green-700 target:border-green-700 h-full border-b-2 border-transparent p-5 py-6 transition-all duration-300 ease-in-out"
+            >NEWS</a
+          >
+          <a
+            href="{%url 'about'%}"
+            id="about"
+            class="nav-link hover:border-b-green-700 target:border-green-700 h-full border-b-2 border-transparent p-5 py-6 transition-all duration-300 ease-in-out"
+            >ABOUT US</a
+          >
+          <a
+            href="{%url 'contact'%}"
+            id="contact"
+            class="nav-link hover:border-b-green-700 target:border-green-700 h-full border-b-2 border-transparent p-5 py-6 transition-all duration-300 ease-in-out"
+            >CONTACT US</a
+          >
+        </div>
+        <div class="flex justify-end gap-10 items-center w-1/2">
+          <!-- nav2-->
+          <a href="#">
+            <div
+              class="flex items-center gap-3 font-semibold text-gray-700 hover:text-yellow-400 transition-colors duration-100"
+            >
+              <svg
+                class="ct-icon"
+                aria-hidden="true"
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="currentColor"
+              >
+                <path
+                  d="M10.5,9h-6c-2.1,0-3.8,1.7-3.8,3.8v1.5c0,0.4,0.3,0.8,0.8,0.8s0.8-0.3,0.8-0.8v-1.5c0-1.2,1-2.2,2.2-2.2h6c1.2,0,2.2,1,2.2,2.2v1.5c0,0.4,0.3,0.8,0.8,0.8s0.8-0.3,0.8-0.8v-1.5C14.2,10.7,12.6,9,10.5,9zM7.5,7C9.4,7,11,5.4,11,3.5
+	S9.4,0,7.5,0S4,1.6,4,3.5S5.6,7,7.5,7zM7.5,1.5c1.1,0,2,0.9,2,2s-0.9,2-2,2s-2-0.9-2-2S6.4,1.5,7.5,1.5z"
+                ></path>
+              </svg>
+              LOGIN
+            </div></a
+          >
+          <a href="#">
+            <div
+              class="flex items-center gap-3 font-semibold text-gray-700 hover:text-yellow-400 transition-colors duration-100"
+            >
+              <svg
+                class="ct-icon"
+                aria-hidden="true"
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="currentColor"
+              >
+                <path
+                  d="M7.5 6c-.1.5-.2 1-.3 1.4 0 .6-.1 1.3-.3 2-.2.7-.5 1.4-1 1.9-.5.6-1.3.9-2.2.9H0v-1.4h3.7c.6 0 .9-.2 1.2-.5.3-.3.5-.7.7-1.3.1-.5.2-1 .3-1.6v-.3c0-.5.1-1 .3-1.5.2-.7.5-1.4 1-1.9.5-.6 1.3-.9 2.2-.9h3l-1.6-1.6 1-1L15 3.5l-3.3 3.3-1-1 1.6-1.6h-3c-.6 0-.9.2-1.2.5-.2.3-.5.7-.6 1.3zM4.9 4.7c.2-.4.4-.9.7-1.3-.5-.4-1.1-.6-1.9-.6H0v1.4h3.7c.6 0 1 .2 1.2.5zm5.8 4.5 1.6 1.6h-3c-.6 0-.9-.2-1.2-.5-.2.4-.4.9-.6 1.3.5.4 1.1.6 1.8.6h3l-1.6 1.6 1 1 3.3-3.3-3.3-3.3-1 1z"
+                ></path></svg
+              >COMPARE
+            </div></a
+          >
+          <a href="#">
+            <div
+              class="flex items-center gap-3 font-semibold text-gray-700 hover:text-yellow-400 transition-colors duration-100"
+            >
+              <svg
+                class="ct-icon"
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="currentColor"
+              >
+                <path
+                  d="M7.5,13.9l-0.4-0.3c-0.2-0.2-4.6-3.5-5.8-4.8C0.4,7.7-0.1,6.4,0,5.1c0.1-1.2,0.7-2.2,1.6-3c0.9-0.8,2.3-1,3.6-0.8C6.1,1.5,6.9,2,7.5,2.6c0.6-0.6,1.4-1.1,2.4-1.3c1.3-0.2,2.6,0,3.5,0.8l0,0c0.9,0.7,1.5,1.8,1.6,3c0.1,1.3-0.3,2.6-1.3,3.7c-1.2,1.4-5.6,4.7-5.7,4.8L7.5,13.9z M4.2,2.7C3.6,2.7,3,2.9,2.5,3.3c-0.6,0.5-0.9,1.2-1,1.9C1.4,6.1,1.8,7,2.4,7.8c0.9,1,3.9,3.4,5.1,4.3c1.2-0.9,4.2-3.3,5.1-4.3c0.7-0.8,1-1.7,0.9-2.6c-0.1-0.8-0.4-1.4-1-1.9l0,0c-0.6-0.5-1.5-0.7-2.3-0.5C9.3,3,8.6,3.5,8.2,4.2L7.5,5.4L6.8,4.2C6.4,3.5,5.7,3,4.9,2.8C4.7,2.8,4.4,2.7,4.2,2.7z"
+                ></path></svg
+              >WISHLIST
+            </div>
+          </a>
+          <a href="#"
+            ><div
+              class="flex items-center gap-3 font-semibold text-gray-700 hover:text-yellow-400 transition-colors duration-100"
+            >
+              <svg
+                aria-hidden="true"
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="currentColor"
+              >
+                <path
+                  d="M14.1,1.6C14,0.7,13.3,0,12.4,0H2.7C1.7,0,1,0.7,0.9,1.6L0.1,13.1c0,0.5,0.1,1,0.5,1.3C0.9,14.8,1.3,15,1.8,15h11.4c0.5,0,0.9-0.2,1.3-0.6c0.3-0.4,0.5-0.8,0.5-1.3L14.1,1.6zM13.4,13.4c0,0-0.1,0.1-0.2,0.1H1.8c-0.1,0-0.2-0.1-0.2-0.1c0,0-0.1-0.1-0.1-0.2L2.4,1.7c0-0.1,0.1-0.2,0.2-0.2h9.7c0.1,0,0.2,0.1,0.2,0.2l0.8,11.5C13.4,13.3,13.4,13.4,13.4,13.4z M10,3.2C9.6,3.2,9.2,3.6,9.2,4v1.5c0,1-0.8,1.8-1.8,1.8S5.8,6.5,5.8,5.5V4c0-0.4-0.3-0.8-0.8-0.8S4.2,3.6,4.2,4v1.5c0,1.8,1.5,3.2,3.2,3.2s3.2-1.5,3.2-3.2V4C10.8,3.6,10.4,3.2,10,3.2z"
+                ></path></svg
+              >$0.00
+            </div></a
+          >
+        </div>
+      </div>
+
+      {% block content%}
+
+      {% endblock content%}
+
+      <div class="bg-slate-900 rounded-3xl mt-16 mb-16 px-10 py-10">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Secure Payments -->
+            <div class="flex items-start gap-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 text-white shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="2" y="5" width="20" height="14" rx="2" />
+                <path stroke-linecap="round" d="M2 9h20" />
+                <path stroke-linecap="round" d="M5 15h4" />
+              </svg>
+              <div>
+                <h3 class="font-bold text-white">Secure Payments</h3>
+                <p class="text-sm text-slate-400 mt-1">
+                  Tellus gravida ipsum aut facilisis tempus at et aliquam
+                  estsem.
+                </p>
+              </div>
+            </div>
+
+            <!-- Free Shipping -->
+            <div class="flex items-start gap-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 text-white shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2 8h11v8H2z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13 11h4l3 3v2h-7z"
+                />
+                <circle cx="6" cy="18" r="1.5" />
+                <circle cx="17" cy="18" r="1.5" />
+              </svg>
+              <div>
+                <h3 class="font-bold text-white">Free Shipping</h3>
+                <p class="text-sm text-slate-400 mt-1">
+                  Non pulvinar aenean ultrices lectus vitae imperdiet aeu.
+                </p>
+              </div>
+            </div>
+
+            <!-- 24/7 Support -->
+            <div class="flex items-start gap-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 text-white shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"
+                />
+                <path
+                  stroke-linecap="round"
+                  d="M10 10a2 2 0 113 1.7c-.6.4-1 1-1 1.8"
+                />
+                <circle cx="12" cy="16" r="0.5" fill="currentColor" />
+              </svg>
+              <div>
+                <h3 class="font-bold text-white">24/7 Support</h3>
+                <p class="text-sm text-slate-400 mt-1">
+                  Nullam iaculis vestibulum arcu id urnain pellentesque quis.
+                </p>
+              </div>
+            </div>
+
+            <!-- Gifts & Sales -->
+            <div class="flex items-start gap-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7 text-white shrink-0"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <rect x="3" y="9" width="18" height="4" rx="1" />
+                <path
+                  stroke-linecap="round"
+                  d="M5 13v7a1 1 0 001 1h12a1 1 0 001-1v-7"
+                />
+                <path stroke-linecap="round" d="M12 9v12" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 9c-1.5 0-3-1-3-2.5S10 4 11 4.5 12 7 12 9zM12 9c1.5 0 3-1 3-2.5S14 4 13 4.5 12 7 12 9z"
+                />
+              </svg>
+              <div>
+                <h3 class="font-bold text-white">Gifts &amp; Sales</h3>
+                <p class="text-sm text-slate-400 mt-1">
+                  Aliquet ullamcorper leo mi vel sit pretium euismod eget
+                  libero.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+         <footer class="max-w-7xl mx-auto px-6 py-14">
+ 
+    <!-- Top row: logo/blurb + phone -->
+    <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+      <div class="max-w-md">
+        <div class="flex items-center gap-2">
+          <img src="{{MEDIA_URL}}/media/logo.svg" alt="" class="h-25 w-25">
+          
+        </div>
+        <p class="mt-4 text-slate-500">
+          Discover our unique assortment of children's apparel and playthings in preparation for the upcoming fall season.
+        </p>
+      </div>
+ 
+      <div class="flex items-center gap-3 border border-gray-200 rounded-full pl-2 pr-5 py-1.5 shrink-0 h-fit">
+        <span class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-900 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.57 1 1 0 01-.25 1.01l-2.2 2.21z"/>
+          </svg>
+        </span>
+        <span class="text-sm font-medium text-slate-700 whitespace-nowrap">+977 - 9844208213</span>
+      </div>
+    </div>
+ 
+    <hr class="border-gray-200 my-10">
+ 
+    <!-- Link columns -->
+    <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+ 
+      <div>
+        <h4 class="font-bold text-slate-900 mb-4">Shop</h4>
+        <ul class="space-y-3 text-slate-500">
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Dresses &amp; Suits</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Shoes &amp; Socks</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Blouses &amp; T-Shirts</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Toys &amp; Games</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Caps &amp; Accessories</a></li>
+        </ul>
+      </div>
+ 
+      <div>
+        <h4 class="font-bold text-slate-900 mb-4">Company</h4>
+        <ul class="space-y-3 text-slate-500">
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">About Us</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">FAQ</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Our News</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Our Story</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Contact Us</a></li>
+        </ul>
+      </div>
+ 
+      <div>
+        <h4 class="font-bold text-slate-900 mb-4">Useful</h4>
+        <ul class="space-y-3 text-slate-500">
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Site Map</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Affiliate Area</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Delivery</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Locations</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Collaboration</a></li>
+        </ul>
+      </div>
+ 
+      <div>
+        <h4 class="font-bold text-slate-900 mb-4">Legal</h4>
+        <ul class="space-y-3 text-slate-500">
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Shipping Policy</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Returns &amp; Exchanges</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Terms of Use</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-slate-900 transition-colors duration-200">Cookies Policy</a></li>
+        </ul>
+      </div>
+ 
+    </div>
+ 
+    <hr class="border-gray-200 my-10">
+ 
+    <!-- Bottom row: copyright + social -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <p class="text-slate-500 text-sm">Copyright © 2026 - WordPress Theme by CreativeThemes</p>
+ 
+      <div class="flex items-center gap-3">
+        <a href="#" class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-800 text-white hover:bg-slate-900 transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/>
+          </svg>
+        </a>
+        <a href="#" class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-800 text-white hover:bg-slate-900 transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.9 3H21.6l-5.8 6.6L22.7 21h-5.3l-4.2-5.5L8.4 21H5.7l6.2-7.1L4.3 3h5.4l3.8 5 5.4-5zM17.9 19.4h1.5L8.2 4.5H6.6l11.3 14.9z"/>
+          </svg>
+        </a>
+        <a href="#" class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-800 text-white hover:bg-slate-900 transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
+          </svg>
+        </a>
+        <a href="#" class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-800 text-white hover:bg-slate-900 transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3a9 9 0 100 18 9 9 0 000-18z" />
+            <path stroke-linecap="round" d="M9 9.5a3 3 0 016 0c0 2-3 2.5-3 4.5m0 3h.01" />
+          </svg>
+        </a>
+        <a href="#" class="flex items-center justify-center h-9 w-9 rounded-full bg-slate-800 text-white hover:bg-slate-900 transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 6.5c-2-3-6-4-8-2.5-1.5 3 0 8 8 12 8-4 9.5-9 8-12-2-1.5-6-.5-8 2.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+ 
+  </footer>
+    </div>
+  </body>
+</html>
